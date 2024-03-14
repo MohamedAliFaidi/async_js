@@ -12,25 +12,22 @@ async function delay(ms) {
   });
 }
 const values = [1, 2, 3, 4, 5];
-iterateWithAsyncAwait(values);
+//iterateWithAsyncAwait(values);
 
-
-
-async function awaitCall() {
+async function awaitCall(bool) {
     try {
-        const data = await fetchDataFromAPI(); // Wait for API response
-        console.log(data);
+        const data = await fetchDataFromAPI(bool); // Wait for API response
+        console.log(data)
     } catch (error) {
         console.error('Failed to fetch data:', error.message);
     }
 }
 
-async function fetchDataFromAPI() {
+async function fetchDataFromAPI(bool) {
     return new Promise((resolve, reject) => {
         // Simulating API call
         setTimeout(() => {
-            const success = true; // Simulating successful response
-            if (success) {
+            if (bool) {
                 resolve('Data from API');
             } else {
                 reject(new Error('API request failed'));
@@ -39,4 +36,5 @@ async function fetchDataFromAPI() {
     });
 }
 
-awaitCall();
+awaitCall(false);
+
