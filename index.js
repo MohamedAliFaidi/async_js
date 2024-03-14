@@ -1,21 +1,15 @@
-// Synchronous
-function bakeCake() {
-  let eggs = getEggs();
-  let flour = getFlour();
-  let sugar = getSugar();
+// task_1
 
-  // Now you can make the cake
+async function iterateWithAsyncAwait(array) {
+  for (const item of array) {
+    await delay(1000); // Wait for 1 second
+    console.log(item);
+  }
 }
-
-// This function gets the eggs synchronously
-function getEggs() {
-  return "eggs";
+async function delay(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
 }
-// Similarly, getFlour and getSugar functions
-function getFlour() {
-  return "floor";
-}
-
-function getSugar() {
-  return "sugar";
-}
+const values = [1, 2, 3, 4, 5];
+iterateWithAsyncAwait(values);
