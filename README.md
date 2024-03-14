@@ -89,3 +89,5 @@ In the promises example, it's like saying, "I promise to get the eggs, and when 
 So, promises are a cleaner and more organized way of handling asynchronous tasks compared to callbacks.
 
 I hope this helps you understand promises and asynchronous programming in JavaScript!
+
+checkout : https://blog.logrocket.com/understanding-asynchronous-javascript/
